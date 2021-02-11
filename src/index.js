@@ -637,7 +637,7 @@ export default class ActionSheet extends Component {
                     position: "absolute",
                     zIndex: 1,
                     backgroundColor: overlayColor,
-                    opacity: defaultOverlayOpacity,
+                    opacity: this.opacityValue.interpolate({ inputRange: [0, 1], outputRange: [0, defaultOverlayOpacity], extrapolate: 'clamp' }),
                   }}
                 />
                 <View
